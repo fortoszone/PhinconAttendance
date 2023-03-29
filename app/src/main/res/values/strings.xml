@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PhinconAttendance</string>
+    <string name="pidc_logo">pidc-logo</string>
+    <string name="skip">SKIP</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="digital_abs">DIGITAL ABSENSI</string>
+    <string name="guna_menceg">Guna mencegah penyebaran virus Covid-19, Pemerintah telah mengeluarkan kebijakan Physical Distancing serta kebijakan bekerja, belajar, dan beribadah dari rumah.</string>
+    <string name="kehadiran_sis">Kehadiran sistem absensi digital merupakan penemuan yang mampu menggantikan pencatatan data kehadiran secara manual</string>
+    <string name="attendance_sys">ATTENDANCE SYSTEM</string>
+    <string name="pengelolaan_kar">Pengelolaan karyawan di era digital yang baik, menghasilkan karyawan terbaik pula, salah satunya absensi karyawan</string>
+    <string name="masker">SELALU PAKAI MASKER</string>
+</resources>
