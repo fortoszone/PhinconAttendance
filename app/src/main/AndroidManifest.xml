@@ -12,6 +12,18 @@
         android:theme="@style/Theme.PhinconAttendance"
         tools:targetApi="31">
         <activity
+            android:name=".ui.dashboard.DashboardActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.forgot.ForgotActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.register.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.auth.login.LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.onboarding.OnboardingActivity"
             android:exported="false" />
         <activity
@@ -25,9 +37,6 @@
         </activity>
         <activity
             android:name=".ui.MainActivity"
-            android:exported="false">
-
-        </activity>
+            android:exported="false" />
     </application>
-
 </manifest>

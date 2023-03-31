@@ -1,4 +1,4 @@
-package com.fortoszone.phinconattendance.ui.onboarding
+package com.fortoszone.phinconattendance.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,19 +9,24 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.fortoszone.phinconattendance.R
 
-class OnboardingViewPagerAdapter(private var title: List<String>, private var desc: List<String>, private var images: List<Int>, private val context: Context) :
+class OnboardingViewPagerAdapter(
+    private var title: List<String>,
+    private var desc: List<String>,
+    private var images: List<Int>,
+    private val context: Context
+) :
     RecyclerView.Adapter<OnboardingViewPagerAdapter.PagerViewHolder>() {
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): OnboardingViewPagerAdapter.PagerViewHolder {
+    ): PagerViewHolder {
         val view: View =
             LayoutInflater.from(context).inflate(R.layout.row_onboarding, parent, false)
         return PagerViewHolder(view)
     }
 
     override fun onBindViewHolder(
-        holder: OnboardingViewPagerAdapter.PagerViewHolder,
+        holder: PagerViewHolder,
         position: Int
     ) {
         holder.tvTitle.text = title[position]

@@ -16,6 +16,7 @@
     
     <color name="text_primary">#042C5C</color>
     <color name="text_secondary">#77869E</color>
+    <color name="te_hint">#979797</color>
 
 
 </resources>

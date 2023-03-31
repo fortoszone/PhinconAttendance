@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.home.HomeFragment">
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="319dp"
+        android:layout_marginTop="-140dp"
+        android:background="@drawable/oval"
+        android:translationZ="1dp"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="207dp"
+        android:background="@drawable/cv_dashboard"
+        app:layout_constraintLeft_toRightOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="54dp"
+        android:paddingBottom="36dp"
+        android:translationZ="2dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingHorizontal="6dp"
+            android:paddingBottom="36dp"
+            tools:ignore="UseCompoundDrawables">
+
+            <TextView
+                style="@style/your_attend"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/avenir_black"
+                android:text="@string/your_attendance" />
+
+            <ImageView
+                android:id="@+id/btn_notification"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:contentDescription="@string/notification_icon"
+                android:elevation="4dp"
+                android:src="@drawable/ic_notification" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_welcome_page"
+            android:layout_width="match_parent"
+            android:layout_height="285dp"
+            android:elevation="4dp"
+            app:cardBackgroundColor="#00F8F9F9"
+            app:cardElevation="0dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/cv_dashboard_home"
+                app:layout_constraintTop_toBottomOf="@id/toolbar" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingHorizontal="20dp"
+                android:paddingTop="20dp">
+
+                <TextView
+                    android:id="@+id/tv_current_time"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/hour_9_00" />
+
+                <TextView
+                    android:id="@+id/tv_current_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:text="@string/_29_januari_2021" />
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                style="@style/check_in"
+                android:layout_width="195dp"
+                android:layout_height="195dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/btn_check_in"
+                android:text="@string/check_in" />
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            style="@style/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="6dp"
+            android:layout_marginVertical="12dp"
+            android:fontFamily="@font/avenir_black"
+            android:text="@string/location" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            tools:itemCount="3"
+            tools:listitem="@layout/row_office_location" />
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

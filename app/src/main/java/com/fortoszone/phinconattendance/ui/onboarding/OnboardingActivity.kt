@@ -1,10 +1,14 @@
 package com.fortoszone.phinconattendance.ui.onboarding
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.fortoszone.phinconattendance.R
+import com.fortoszone.phinconattendance.adapter.OnboardingViewPagerAdapter
 import com.fortoszone.phinconattendance.databinding.ActivityOnboardingBinding
+import com.fortoszone.phinconattendance.ui.auth.login.LoginActivity
+import com.fortoszone.phinconattendance.ui.auth.register.RegisterActivity
 import me.relex.circleindicator.CircleIndicator3
 
 class OnboardingActivity : AppCompatActivity() {
@@ -32,18 +36,14 @@ class OnboardingActivity : AppCompatActivity() {
 
         viewPager.offscreenPageLimit = 1
 
-        viewPager.apply {
-            beginFakeDrag()
-            fakeDragBy(-10f)
-            endFakeDrag()
-        }
-
         binding.btnLogin.setOnClickListener {
-
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         binding.btnSignUp.setOnClickListener {
-
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
         }
     }
 
