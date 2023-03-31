@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "573386459145",
+    "project_id": "phinconattendance",
+    "storage_bucket": "phinconattendance.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:573386459145:android:97882850e1e195408310d8",
+        "android_client_info": {
+          "package_name": "com.fortoszone.phinconattendance"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "573386459145-dboqtg4c72eirtqn53fln52jv2c9bdv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDazH5cYDuEcU9xOU678PYd1NjLm-5AvAg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "573386459145-dboqtg4c72eirtqn53fln52jv2c9bdv8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

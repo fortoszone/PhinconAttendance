@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.fortoszone.phinconattendance.databinding.FragmentHistoryBinding
 
 class HistoryFragment : Fragment() {
+    private val tabTitles = arrayListOf("Day", "Week", "Month", "Year")
 
     private var _binding: FragmentHistoryBinding? = null
 
@@ -28,8 +29,14 @@ class HistoryFragment : Fragment() {
         _binding = FragmentHistoryBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
+//        setUpTabLayoutWithViewPager()
+
         return root
     }
+
+//    private fun setUpTabLayoutWithViewPager() {
+//        binding.vpLogs.adapter =
+//    }
 
     override fun onDestroyView() {
         super.onDestroyView()
