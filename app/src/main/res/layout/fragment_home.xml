@@ -103,13 +103,15 @@
             </LinearLayout>
 
             <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_check_in"
                 style="@style/check_in"
                 android:layout_width="195dp"
                 android:layout_height="195dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/btn_check_in"
-                android:text="@string/check_in" />
+                android:text="@string/check_in"
+                android:textAllCaps="true" />
         </androidx.cardview.widget.CardView>
 
         <TextView

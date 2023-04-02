@@ -4,12 +4,14 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.util.Patterns
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.fortoszone.phinconattendance.databinding.ActivityRegisterBinding
 import com.fortoszone.phinconattendance.ui.dashboard.DashboardActivity
 import com.google.firebase.FirebaseApp
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.auth.ktx.userProfileChangeRequest
 import com.google.firebase.ktx.Firebase
 
 class RegisterActivity : AppCompatActivity() {
@@ -43,6 +45,12 @@ class RegisterActivity : AppCompatActivity() {
                 return
             }
 
+            if (!(username.isNotEmpty() && Patterns.EMAIL_ADDRESS.matcher(username).matches())) {
+                binding.tvUsername.error = "Please fill email in"
+                binding.tvUsername.requestFocus()
+                return
+            }
+
             if (fullName.isEmpty()) {
                 binding.tvFullName.error = "Full name required"
                 binding.tvFullName.requestFocus()
@@ -63,22 +71,25 @@ class RegisterActivity : AppCompatActivity() {
 
             auth.createUserWithEmailAndPassword(username, pwd).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                    // Sign in success, update UI with the signed-in user's information
                     Log.d(TAG, "createUserWithEmail:success")
                     Toast.makeText(
                         baseContext, "Account Created.",
                         Toast.LENGTH_SHORT
                     ).show()
                     val user = auth.currentUser
+
+                    val profileUpdates = userProfileChangeRequest {
+                        displayName = binding.tvFullName.text.toString().trim()
+                    }
+
+                    user!!.updateProfile(profileUpdates)
+
                     startActivity(Intent(this, DashboardActivity::class.java))
-                    //updateUI(user)
                 } else {
-                    // If sign in fails, display a message to the user.
                     Toast.makeText(
                         baseContext, "${Log.w(TAG, "createUserWithEmail:failure", task.exception)}",
                         Toast.LENGTH_SHORT
                     ).show()
-                    //updateUI(null)
                 }
             }
         } else {
@@ -89,7 +100,7 @@ class RegisterActivity : AppCompatActivity() {
 
     private fun isPwdIdentical(): Boolean {
         var identical = false
-        if (binding.tvPwd.text.toString().trim() != binding.tvPwdRepeat.text.toString().trim()) {
+        if (binding.tvPwd.text.toString().trim() == binding.tvPwdRepeat.text.toString().trim()) {
             identical = true
         }
 

@@ -37,13 +37,15 @@ class OnboardingActivity : AppCompatActivity() {
         viewPager.offscreenPageLimit = 1
 
         binding.btnLogin.setOnClickListener {
-            val intent = Intent(this, LoginActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, LoginActivity::class.java))
         }
 
         binding.btnSignUp.setOnClickListener {
-            val intent = Intent(this, RegisterActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(this, RegisterActivity::class.java))
+        }
+
+        binding.btnSkip.setOnClickListener {
+            startActivity(Intent(this, LoginActivity::class.java))
         }
     }
 

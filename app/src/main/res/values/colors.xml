@@ -13,10 +13,14 @@
     <color name="primary">#0063C6</color>
     <color name="btn_border">#77869E</color>
     <color name="tertiary">#FFC33A</color>
+
+    <color name="check_in">#11C04D</color>
     
     <color name="text_primary">#042C5C</color>
     <color name="text_secondary">#77869E</color>
     <color name="te_hint">#979797</color>
+
+    <color name="tab_selected_bg">#DFE7F5</color>
 
 
 </resources>

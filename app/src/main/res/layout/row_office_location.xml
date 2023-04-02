@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/location"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:backgroundTint="@color/white_bg"
     android:layout_marginBottom="12dp"
+    android:backgroundTint="@color/white_bg"
     app:cardElevation="0dp">
 
     <LinearLayout
+        android:id="@+id/btn_location"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@drawable/loc"
@@ -15,12 +17,12 @@
         android:padding="8dp">
 
         <ImageView
+            android:id="@+id/iv_office"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginEnd="17dp"
             android:contentDescription="@string/office_image"
-            android:src="@drawable/img_office_phincon"
-            android:id="@+id/iv_office"/>
+            android:src="@drawable/img_office_phincon" />
 
         <LinearLayout
             android:layout_width="wrap_content"

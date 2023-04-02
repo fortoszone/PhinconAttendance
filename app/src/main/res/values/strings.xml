@@ -38,7 +38,8 @@
     <string name="notification_icon">Notification Icon</string>
     <string name="hour_9_00">Hour: 9:00</string>
     <string name="_29_januari_2021">29 Januari 2021</string>
-    <string name="check_in">CHECK IN</string>
+    <string name="check_in">Check In</string>
+    <string name="check_out">Check Out</string>
     <string name="location">Location</string>
     <string name="office_image">Office image</string>
     <string name="pt_phincon">PT. Phincon</string>
@@ -46,7 +47,6 @@
     <string name="telkomsel">Telkomsel Smart Office</string>
     <string name="jl_jend">Jl. Jend. Gatot Subroto Kav. 52. Jakarta Selatan</string>
     <string name="rumah">Rumah</string>
-    <string name="jakarta">Jakarta</string>
     <string name="attendance_history">Attendance History</string>
     <string name="logs">Logs</string>
     <string name="general">GENERAL</string>
@@ -62,5 +62,13 @@
     <string name="address_icon">Address Icon</string>
     <string name="alamat">Alamat</string>
     <string name="jakarta_selatan">Jakarta Selatan</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="_9_00">9:00</string>
+    <string name="stripe"> - </string>
+    <string name="day">Day</string>
+    <string name="week">Week</string>
+    <string name="month">Month</string>
+    <string name="year">Year</string>
+    <string name="fill_email_in">Fill email in</string>
 
 </resources>

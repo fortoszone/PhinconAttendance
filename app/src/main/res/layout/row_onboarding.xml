@@ -3,24 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:gravity="bottom"
     android:orientation="vertical"
-    android:padding="30dp"
+    android:overScrollMode="never"
+    android:paddingHorizontal="30dp"
+    android:paddingBottom="24dp"
     tools:context=".ui.onboarding.OnboardingActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iv_onboarding"
         android:layout_width="wrap_content"
         android:layout_height="250dp"
-        android:scaleType="centerCrop"
+        android:layout_marginBottom="128dp"
+        android:scaleType="fitCenter"
         android:src="@drawable/icons_time_attendance_clocks" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/tv_onboarding_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="88dp"
         android:layout_marginBottom="22dp"
         android:gravity="center_horizontal"
         android:text="@string/digital_abs"

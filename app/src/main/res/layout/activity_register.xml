@@ -87,7 +87,7 @@
                 android:layout_height="60dp"
                 android:layout_marginBottom="12dp"
                 android:background="@drawable/text_edit_selector"
-                android:hint="@string/username"
+                android:hint="@string/fill_email_in"
                 android:importantForAutofill="no"
                 android:inputType="text"
                 android:padding="20dp"

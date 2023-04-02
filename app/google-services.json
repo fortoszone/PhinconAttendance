@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "573386459145",
+    "firebase_url": "https://phinconattendance-default-rtdb.asia-southeast1.firebasedatabase.app",
     "project_id": "phinconattendance",
     "storage_bucket": "phinconattendance.appspot.com"
   },

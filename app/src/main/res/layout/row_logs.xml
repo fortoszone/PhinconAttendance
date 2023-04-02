@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/location"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:id="@+id/btn_location"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:backgroundTint="@color/white_bg">
+
+        <ImageView
+            android:id="@+id/iv_office"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="17dp"
+            android:contentDescription="@string/office_image"
+            android:src="@drawable/img_office_phincon" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_check_in"
+                    style="@style/office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@string/check_in" />
+
+                <TextView
+                    style="@style/office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@string/stripe" />
+
+                <TextView
+                    android:id="@+id/tv_office"
+                    style="@style/office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@string/pt_phincon" />
+
+                <TextView
+                    style="@style/office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@string/stripe" />
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    style="@style/office"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/avenir_black"
+                    android:text="@string/_9_00" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_office_address"
+                style="@style/office_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/avenir_book"
+                android:text="@string/office_88_k" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
